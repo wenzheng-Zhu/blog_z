@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'categories/new'
+  get 'categories/create'
+  get 'categories/index'
+  get 'categories/edit'
+  get 'categories/update'
   # get 'sessions/new'
   # get 'sessions/create'
   # get 'sessions/destroy'
@@ -20,6 +25,7 @@ Rails.application.routes.draw do
   resources :articles
 
   resources :users, except: [:new]
+  resources :categories, except: [:destroy]
 
   get '/signup', to: 'users#new'
 
