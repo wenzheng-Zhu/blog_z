@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'pages/home'
   get 'categories/new'
   get 'categories/create'
   get 'categories/index'
